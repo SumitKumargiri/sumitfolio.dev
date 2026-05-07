@@ -50,19 +50,19 @@ export function Contact() {
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      value: 'john.doe@example.com',
-      link: 'mailto:john.doe@example.com',
+      value: 'sumitgiri15434@gmail.com',
+      link: 'mailto:sumitgiri15434@gmail.com',
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
+      value: '+91 9915177859',
+      link: 'tel:+919915177859',
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Uttar Pradesh, UP',
       link: null,
     },
   ];

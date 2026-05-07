@@ -14,7 +14,7 @@ export const SOCIAL_LINKS = [
   { icon: 'Github', href: 'https://github.com', label: 'GitHub' },
   { icon: 'Linkedin', href: 'https://linkedin.com', label: 'LinkedIn' },
   { icon: 'Twitter', href: 'https://twitter.com', label: 'Twitter' },
-  { icon: 'Mail', href: 'mailto:john.doe@example.com', label: 'Email' },
+  { icon: 'Mail', href: 'mailto:sumitgiri15434@gmail.com', label: 'Email' },
 ] as const;
 
 // Animation Durations (in milliseconds)

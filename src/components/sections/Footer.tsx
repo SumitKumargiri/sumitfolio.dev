@@ -9,7 +9,7 @@ export function Footer() {
     { icon: <Github className="w-5 h-5" />, href: 'https://github.com', label: 'GitHub' },
     { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com', label: 'LinkedIn' },
     { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: <Mail className="w-5 h-5" />, href: 'mailto:john.doe@example.com', label: 'Email' },
+    { icon: <Mail className="w-5 h-5" />, href: 'mailto:sumitgiri15434@gmail.com', label: 'Email' },
   ];
 
   return (

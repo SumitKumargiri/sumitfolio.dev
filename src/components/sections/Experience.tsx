@@ -31,7 +31,7 @@ export function Experience() {
       ],
     },
     {
-      company: 'CDAC',
+      company: 'Centre for Development of Advanced Computing (CDAC)',
       role: 'Junior Developer',
       period: '2024 - 2025',
       location: 'Mohali,Punjab(PB)',

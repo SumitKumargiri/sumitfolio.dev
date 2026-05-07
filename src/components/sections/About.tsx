@@ -9,22 +9,23 @@ export function About() {
     {
       icon: <Code className="w-8 h-8 text-blue-400" />,
       title: 'Frontend',
-      items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Vue.js'],
+      items: ['React', 'Next.js','Angular', 'TypeScript', 'Tailwind CSS', 'Vue.js','Jest'],
     },
     {
       icon: <Database className="w-8 h-8 text-purple-400" />,
       title: 'Backend',
-      items: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'Redis'],
+      items: ['.Net', 'PostgreSQL', 'SQL Server', 'Redis','Dapper','Hangfire','Microservices',
+                'GRPC','SignalR','Unit Testing'],
     },
     {
       icon: <Globe className="w-8 h-8 text-cyan-400" />,
       title: 'Cloud & DevOps',
-      items: ['AWS', 'Docker', 'Kubernetes', 'CI/CD', 'Terraform'],
+      items: ['AWS', 'Docker','Azure', 'CI/CD'],
     },
     {
       icon: <Layers className="w-8 h-8 text-pink-400" />,
       title: 'Tools',
-      items: ['Git', 'VS Code', 'Figma', 'Postman', 'Linux'],
+      items: ['Git', 'VS Code','Visual Studio', 'Figma', 'Postman', 'Linux'],
     },
   ];
 
