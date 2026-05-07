@@ -1,0 +1,11 @@
+{
+  "name": "Developer Portfolio",
+  "short_name": "Portfolio",
+  "description": "Senior Full-Stack Developer specializing in React, Next.js, and Node.js",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "scope": "/"
+}
