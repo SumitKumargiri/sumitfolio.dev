@@ -51,13 +51,7 @@ src/
   types/
   constants/
   providers/
-  middleware.ts
 ```
-
-## API Routes
-
-- GET /api/health
-- POST /api/contact
 
 ## Environment Variables
 

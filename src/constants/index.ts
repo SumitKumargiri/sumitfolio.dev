@@ -6,7 +6,6 @@ export const APP_NAME = 'Developer Portfolio';
 export const APP_DESCRIPTION = 'Senior Full-Stack Developer specializing in React, Next.js, and Node.js';
 
 export const SITE_URL = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
-export const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api';
 
 export { NAV_ITEMS, ROUTES, SECTIONS } from './routes';
 

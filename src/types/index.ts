@@ -49,12 +49,6 @@ export interface ContactFormData {
   message: string;
 }
 
-export interface ApiResponse<T = unknown> {
-  success: boolean;
-  message: string;
-  data?: T;
-}
-
 export interface SocialLink {
   icon: string;
   href: string;

@@ -1,47 +1,41 @@
-import axios from 'axios';
+import emailjs from '@emailjs/browser';
+import type { ContactFormData } from '@/types';
 
-interface ContactFormData {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
-
-interface ContactResponse {
+export interface ContactResponse {
   success: boolean;
   message: string;
 }
 
-const apiClient = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || '/api',
-  timeout: 10000,
-  headers: {
-    'Content-Type': 'application/json',
-  },
-});
+const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
 export async function submitContactForm(data: ContactFormData): Promise<ContactResponse> {
-  try {
-    const response = await apiClient.post<ContactResponse>('/contact', data);
-    return response.data;
-  } catch (error) {
-    console.error('Error submitting contact form:', error);
+  if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
     return {
       success: false,
-      message: 'Failed to submit contact form',
+      message: 'Contact form is not configured (missing EmailJS env vars).',
     };
   }
-}
 
-export async function subscribeNewsletter(email: string): Promise<ContactResponse> {
   try {
-    const response = await apiClient.post<ContactResponse>('/newsletter/subscribe', { email });
-    return response.data;
+    await emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      {
+        name: data.name,
+        email: data.email,
+        subject: data.subject,
+        message: data.message,
+      },
+      {
+        publicKey: EMAILJS_PUBLIC_KEY,
+      }
+    );
+
+    return { success: true, message: 'Message sent.' };
   } catch (error) {
-    console.error('Error subscribing to newsletter:', error);
-    return {
-      success: false,
-      message: 'Failed to subscribe to newsletter',
-    };
+    console.error('Error submitting contact form:', error);
+    return { success: false, message: 'Failed to send message.' };
   }
 }

@@ -9,10 +9,6 @@ export const ROUTES = {
   pages: {
     home: '/',
   },
-  api: {
-    health: '/api/health',
-    contact: '/api/contact',
-  },
   meta: {
     sitemap: '/sitemap.xml',
     robots: '/robots.txt',
@@ -32,7 +28,6 @@ export const SECTIONS = {
 
 export type AppRoutePath =
   | (typeof ROUTES.pages)[keyof typeof ROUTES.pages]
-  | (typeof ROUTES.api)[keyof typeof ROUTES.api]
   | (typeof ROUTES.meta)[keyof typeof ROUTES.meta];
 
 export type SectionId = (typeof SECTIONS)[keyof typeof SECTIONS];
