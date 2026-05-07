@@ -1,6 +1,6 @@
 # Environment Variables
-.env.local
-.env.*.local
+# .env.local
+# .env.*.local
 
 # Dependencies
 node_modules/
@@ -9,7 +9,7 @@ node_modules/
 .pnp.js
 pnpm-lock.yaml
 yarn.lock
-package-lock.json
+# package-lock.json
 
 # Testing
 /coverage
@@ -42,7 +42,7 @@ Thumbs.db
 .DS_Store
 
 # Misc
-.env
-.env*.local
+# .env
+# .env*.local
 *.pem
 .pnpm-debug.log*
