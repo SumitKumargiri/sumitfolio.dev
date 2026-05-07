@@ -1,9 +1,10 @@
 import type { MetadataRoute } from 'next';
 import { ROUTES, absoluteUrl } from '@/constants/routes';
 
-export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://yourdomain.com';
+export const dynamic = 'force-static';
 
+export default function robots(): MetadataRoute.Robots {
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://sumitkumargiri.github.io/sumitfolio.dev';
   return {
     rules: [
       {

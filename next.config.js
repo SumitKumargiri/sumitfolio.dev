@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+
   images: {
-    unoptimized: process.env.NODE_ENV === 'development',
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -9,10 +11,14 @@ const nextConfig = {
       },
     ],
   },
+
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
   productionBrowserSourceMaps: false,
+
+  basePath: '/sumitfolio.dev',
+  assetPrefix: '/sumitfolio.dev/',
 };
 
 export default nextConfig;

@@ -1,9 +1,10 @@
 import { MetadataRoute } from 'next';
 import { ROUTES, SECTIONS, absoluteUrl, sectionHash } from '@/constants/routes';
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://yourdomain.com';
+export const dynamic = 'force-static';
 
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://sumitkumargiri.github.io/sumitfolio.dev';
   return [
     {
       url: absoluteUrl(baseUrl, ROUTES.pages.home),
