@@ -1,0 +1,14 @@
+# Vercel build ignore file
+.git
+.gitignore
+.env.example
+README.md
+*.log
+node_modules
+.next
+.vscode
+.idea
+*.swp
+*.swo
+Thumbs.db
+.DS_Store

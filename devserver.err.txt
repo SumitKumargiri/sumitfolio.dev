@@ -1,0 +1,13 @@
+Error: spawn EPERM
+    at ChildProcess.spawn (node:internal/child_process:420:11)
+    at spawn (node:child_process:787:9)
+    at fork (node:child_process:174:10)
+    at C:\Users\Sumit.g\Downloads\Premium Developer Portfolio Website\node_modules\next\dist\cli\next-dev.js:234:45
+    at new Promise (<anonymous>)
+    at startServer (C:\Users\Sumit.g\Downloads\Premium Developer Portfolio Website\node_modules\next\dist\cli\next-dev.js:210:16)
+    at runDevServer (C:\Users\Sumit.g\Downloads\Premium Developer Portfolio Website\node_modules\next\dist\cli\next-dev.js:317:23)
+    at Module.nextDev (C:\Users\Sumit.g\Downloads\Premium Developer Portfolio Website\node_modules\next\dist\cli\next-dev.js:325:11) {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'spawn'
+}

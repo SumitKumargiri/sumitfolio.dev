@@ -1,0 +1,48 @@
+# Environment Variables
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+.npm-cache/
+/.pnp
+.pnp.js
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# Testing
+/coverage
+
+# Next.js
+/.next/
+/out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Production
+/build
+/dist
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# IDE
+.vscode
+*.sublime-workspace
+*.sublime-project
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Misc
+.env
+.env*.local
+*.pem
+.pnpm-debug.log*
