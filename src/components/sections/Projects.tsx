@@ -31,6 +31,16 @@ export function Projects() {
       demo: 'https://example.com',
     },
     {
+      title: 'Fleet & Transportation Management Platform',
+      description:'An enterprise-grade full-stack logistics and fleet management platform inspired by real-world transportation workflows and supply chain operations. Built with React, .NET, and Clean Architecture, the system enables real-time fleet tracking, route optimization, shipment monitoring, customer management, transport planning, live notifications with SignalR and WebSockets, analytics dashboards using amCharts, and secure SQL Server–based data processing. The platform supports scalable cloud deployment, role-based access control, API integrations, reporting modules, and operational visibility for modern logistics ecosystems.',
+      image:'https://images.unsplash.com/photo-1502877338535-766e1452684a?w=1200&h=800&fit=crop',
+      tech: ['Angular','.NET Core','Clean Architecture','SQL Server','REST API','JWT Authentication',
+        'Redis','Unit Testing'],
+      category: 'Full-Stack',
+      github: 'https://github.com/SumitKumargiri',
+      demo:'https://cnx-championxconnect-portal-dev.azurewebsites.net/Account/Login?app=fleetx-dev.connexia.championx.com/#/home',
+    },
+    {
       title: 'Social Media Dashboard',
       description: 'Analytics dashboard for tracking social media metrics across multiple platforms.',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
