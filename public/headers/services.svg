@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" fill="none" role="img" aria-label="Services header illustration">
+  <defs>
+    <linearGradient id="g1" x1="120" y1="520" x2="880" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE" stop-opacity="0.75"/>
+      <stop offset="0.55" stop-color="#60A5FA" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0.35"/>
+    </linearGradient>
+    <radialGradient id="r1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(520 210) rotate(12) scale(520 360)">
+      <stop stop-color="#60A5FA" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#111827" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" fill="#0B1220"/>
+  <rect x="40" y="40" width="880" height="460" rx="28" fill="url(#r1)" />
+
+  <g filter="url(#blur)" opacity="0.9">
+    <path d="M140 392C196 286 300 228 430 228C560 228 642 172 758 168C850 164 904 206 932 262C904 406 784 474 610 474H220C170 474 146 444 140 392Z" fill="url(#g1)"/>
+  </g>
+
+  <g opacity="0.95">
+    <path d="M270 160C270 138 288 120 310 120H650C672 120 690 138 690 160V310C690 332 672 350 650 350H310C288 350 270 332 270 310V160Z" fill="#0F172A" stroke="rgba(255,255,255,0.10)" stroke-width="2"/>
+    <path d="M320 170H640" stroke="rgba(255,255,255,0.10)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M320 218H590" stroke="rgba(255,255,255,0.10)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M320 266H560" stroke="rgba(255,255,255,0.10)" stroke-width="12" stroke-linecap="round"/>
+
+    <circle cx="330" cy="402" r="22" fill="#22D3EE" fill-opacity="0.45"/>
+    <circle cx="430" cy="402" r="22" fill="#60A5FA" fill-opacity="0.45"/>
+    <circle cx="530" cy="402" r="22" fill="#A78BFA" fill-opacity="0.45"/>
+    <path d="M330 402H530" stroke="rgba(255,255,255,0.10)" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>
+

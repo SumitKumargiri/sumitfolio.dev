@@ -12,21 +12,22 @@ export function Projects() {
 
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with real-time inventory, payment processing, and admin dashboard.',
-      image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      title: 'Customer Inventory Management System',
+      description: 'A scalable full-stack inventory management system built with React and .NET using Clean Architecture principles.' 
+           + 'The platform supports real-time inventory tracking, customer management, live stock updates using SignalR and WebSocket communication, interactive dashboards with amCharts, and secure SQL Server data management for enterprise-level performance.',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop',
+      tech: [ 'React','.NET','Clean Architecture','SignalR','WebSocket','Hub','SQL Server','amCharts','jest test cases'],
       category: 'Full-Stack',
       github: 'https://github.com',
-      demo: 'https://example.com',
+      demo: 'https://connexiahub-dev.connexia.championx.com/',
     },
     {
       title: 'Task Management SaaS',
       description: 'Project management tool with team collaboration, real-time updates, and analytics dashboard.',
       image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop',
-      tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
+      tech: ['Dotnet','Clean Architecture', 'TypeScript', 'PostgreSQL', 'Angular'],
       category: 'Full-Stack',
-      github: 'https://github.com',
+      github: 'https://github.com/SumitKumargiri/TaskManagement',
       demo: 'https://example.com',
     },
     {
@@ -42,9 +43,9 @@ export function Projects() {
       title: 'REST API Gateway',
       description: 'Microservices API gateway with authentication, rate limiting, and monitoring.',
       image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop',
-      tech: ['Node.js', 'Express', 'Redis', 'Docker'],
+      tech: ['Dotnet', 'Clean Architecture', 'Redis', 'Dapper','SignalR','Unit Testing'],
       category: 'Backend',
-      github: 'https://github.com',
+      github: 'https://github.com/SumitKumargiri/Dotnet-Core8',
       demo: 'https://example.com',
     },
     {
@@ -60,16 +61,18 @@ export function Projects() {
       title: 'Real-time Chat App',
       description: 'WebSocket-based chat application with rooms, direct messaging, and file sharing.',
       image: 'https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=600&h=400&fit=crop',
-      tech: ['React', 'Socket.io', 'Node.js', 'MongoDB'],
-      category: 'Full-Stack',
-      github: 'https://github.com',
-      demo: 'https://example.com',
+      tech: ['Next.js', 'Socket.io', 'Websocket', 'SignalR','Tailwind CSS'],
+      category: 'Frontend',
+      github: 'https://github.com/Sumitgiriyoeki/ChatApplication',
+      demo: 'https://sumitgiriyoeki.github.io/ChatApplication/',
     },
   ];
 
   const categories = ['All', 'Full-Stack', 'Frontend', 'Backend'];
 
-  const filteredProjects = filter === 'All' ? projects : projects.filter((p) => p.category === filter);
+  // const filteredProjects = filter === 'All' ? projects : projects.filter((p) => p.category === filter);
+  const filteredProjects = filter === 'All'? projects: projects.filter((p) => p.category === filter);
+  const displayedProjects = variant === 'section'? filteredProjects.slice(0, 3): filteredProjects;
 
   return (
     <section id="projects" className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-900/10 to-purple-900/10">
@@ -103,7 +106,7 @@ export function Projects() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProjects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <Card key={index} glass hover className="overflow-hidden group">
               <div className="relative overflow-hidden rounded-lg mb-4 h-48 bg-gray-800">
                 <Image
