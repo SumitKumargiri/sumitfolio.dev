@@ -4,13 +4,16 @@ import { motion } from 'motion/react';
 import { Menu, X, Moon, Sun } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
-import { NAV_ITEMS } from '@/constants';
+import { usePathname, useRouter } from 'next/navigation';
+import { NAV_ITEMS, ROUTES, SECTIONS } from '@/constants';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     setMounted(true);
@@ -24,12 +27,31 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
+  const getTargetRoute = (id: string) => {
+    switch (id) {
+      case SECTIONS.home:
+        return ROUTES.pages.home;
+      case SECTIONS.about:
+        return ROUTES.pages.about;
+      case SECTIONS.experience:
+        return ROUTES.pages.experience;
+      case SECTIONS.projects:
+        return ROUTES.pages.projects;
+      case SECTIONS.services:
+        return ROUTES.pages.services;
+      case SECTIONS.testimonials:
+        return ROUTES.pages.testimonials;
+      case SECTIONS.contact:
+        return ROUTES.pages.contact;
+      default:
+        return ROUTES.pages.home;
     }
+  };
+
+  const handleNavClick = (id: string) => {
+    const target = getTargetRoute(id);
+    if (pathname !== target) router.push(target);
+    setIsOpen(false);
   };
 
   const isDark = theme === 'dark' || !mounted;
@@ -48,7 +70,7 @@ export function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-2xl bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent cursor-pointer font-bold"
-            onClick={() => scrollToSection('home')}
+            onClick={() => handleNavClick(SECTIONS.home)}
           >
             &lt;Dev/&gt;
           </motion.div>
@@ -57,8 +79,10 @@ export function Navbar() {
             {NAV_ITEMS.map((item) => (
               <button
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-gray-300 hover:text-white transition-colors relative group"
+                onClick={() => handleNavClick(item.id)}
+                className={`transition-colors relative group ${
+                  pathname === getTargetRoute(item.id) ? 'text-white' : 'text-gray-300 hover:text-white'
+                }`}
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300" />
@@ -103,8 +127,10 @@ export function Navbar() {
               {NAV_ITEMS.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="text-gray-300 hover:text-white transition-colors text-left py-2"
+                  onClick={() => handleNavClick(item.id)}
+                  className={`transition-colors text-left py-2 ${
+                    pathname === getTargetRoute(item.id) ? 'text-white' : 'text-gray-300 hover:text-white'
+                  }`}
                 >
                   {item.label}
                 </button>

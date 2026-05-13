@@ -9,7 +9,11 @@ import { Mail, MapPin, Phone, Send } from 'lucide-react';
 import { useState } from 'react';
 import { submitContactForm } from '@/services/contact';
 
-export function Contact() {
+interface ContactProps {
+  variant?: 'section' | 'page';
+}
+
+export function Contact({ variant = 'section' }: ContactProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -68,22 +72,24 @@ export function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-32 px-4 sm:px-6 lg:px-8">
+    <section id="contact" className={`${variant === 'page' ? 'py-16' : 'py-32'} px-4 sm:px-6 lg:px-8`}>
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            Get In Touch
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-4" />
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            Have a project in mind? Let's discuss how I can help bring your ideas to life.
-          </p>
-        </motion.div>
+        {variant === 'section' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+              Get In Touch
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-4" />
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Have a project in mind? Let's discuss how I can help bring your ideas to life.
+            </p>
+          </motion.div>
+        )}
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {contactInfo.map((info, index) => (

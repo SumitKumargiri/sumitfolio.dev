@@ -7,7 +7,11 @@ import { ExternalLink, Github } from 'lucide-react';
 import { useState } from 'react';
 import Image from 'next/image';
 
-export function Projects() {
+interface ProjectsProps {
+  variant?: 'section' | 'page';
+}
+
+export function Projects({ variant = 'section' }: ProjectsProps) {
   const [filter, setFilter] = useState('All');
 
   const projects = [
@@ -72,7 +76,12 @@ export function Projects() {
   const filteredProjects = filter === 'All' ? projects : projects.filter((p) => p.category === filter);
 
   return (
-    <section id="projects" className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-900/10 to-purple-900/10">
+    <section
+      id="projects"
+      className={`px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-900/10 to-purple-900/10 ${
+        variant === 'page' ? 'py-16' : 'py-32'
+      }`}
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -80,10 +89,14 @@ export function Projects() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            Featured Projects
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-8" />
+          {variant === 'section' && (
+            <>
+              <h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                Featured Projects
+              </h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-8" />
+            </>
+          )}
 
           <div className="flex flex-wrap items-center justify-center gap-4">
             {categories.map((category) => (

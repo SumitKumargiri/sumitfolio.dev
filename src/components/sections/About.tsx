@@ -4,12 +4,16 @@ import { motion } from 'motion/react';
 import { Card } from '@/components/ui/Card';
 import { Code, Database, Globe, Layers } from 'lucide-react';
 
-export function About() {
+interface AboutProps {
+  variant?: 'section' | 'page';
+}
+
+export function About({ variant = 'section' }: AboutProps) {
   const skills = [
     {
       icon: <Code className="w-8 h-8 text-blue-400" />,
       title: 'Frontend',
-      items: ['React', 'Next.js','Angular', 'TypeScript', 'Tailwind CSS', 'Vue.js','Jest'],
+      items: ['React', 'Next.js','Angular', 'TypeScript', 'Tailwind CSS', 'Vue.js','Jest','amcharts'],
     },
     {
       icon: <Database className="w-8 h-8 text-purple-400" />,
@@ -25,24 +29,31 @@ export function About() {
     {
       icon: <Layers className="w-8 h-8 text-pink-400" />,
       title: 'Tools',
-      items: ['Git', 'VS Code','Visual Studio', 'Figma', 'Postman', 'Linux'],
+      items: ['Git', 'VS Code','Visual Studio', 'Postman', 'Linux', 'Jira','Azure DevOps','GitHub Actions'],
     },
   ];
 
   return (
-    <section id="about" className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-blue-900/10">
+    <section
+      id="about"
+      className={`px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-blue-900/10 ${
+        variant === 'page' ? 'py-16' : 'py-32'
+      }`}
+    >
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            About Me
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full" />
-        </motion.div>
+        {variant === 'section' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+              About Me
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full" />
+          </motion.div>
+        )}
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <Card glass>

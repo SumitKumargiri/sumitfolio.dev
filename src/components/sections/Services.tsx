@@ -4,7 +4,11 @@ import { motion } from 'motion/react';
 import { Card } from '@/components/ui/Card';
 import { Code, Database, Globe, Palette, Server, Smartphone } from 'lucide-react';
 
-export function Services() {
+interface ServicesProps {
+  variant?: 'section' | 'page';
+}
+
+export function Services({ variant = 'section' }: ServicesProps) {
   const services = [
     {
       icon: <Code className="w-12 h-12" />,
@@ -45,23 +49,25 @@ export function Services() {
   ];
 
   return (
-    <section id="services" className="py-32 px-4 sm:px-6 lg:px-8">
+    <section id="services" className={`${variant === 'page' ? 'py-16' : 'py-32'} px-4 sm:px-6 lg:px-8`}>
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            Services
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-4" />
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            Comprehensive development solutions tailored to bring your vision to life with cutting-edge technologies
-            and proven expertise.
-          </p>
-        </motion.div>
+        {variant === 'section' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+              Services
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-4" />
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Comprehensive development solutions tailored to bring your vision to life with cutting-edge technologies
+              and proven expertise.
+            </p>
+          </motion.div>
+        )}
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (

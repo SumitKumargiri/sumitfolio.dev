@@ -4,7 +4,11 @@ import { motion } from 'motion/react';
 import { Card } from '@/components/ui/Card';
 import { Briefcase } from 'lucide-react';
 
-export function Experience() {
+interface ExperienceProps {
+  variant?: 'section' | 'page';
+}
+
+export function Experience({ variant = 'section' }: ExperienceProps) {
   const experiences = [
     {
       company: 'Yoeki Soft PVT. LTD.',
@@ -45,19 +49,21 @@ export function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-32 px-4 sm:px-6 lg:px-8">
+    <section id="experience" className={`${variant === 'page' ? 'py-16' : 'py-32'} px-4 sm:px-6 lg:px-8`}>
       <div className="max-w-5xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            Experience
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full" />
-        </motion.div>
+        {variant === 'section' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+              Experience
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full" />
+          </motion.div>
+        )}
 
         <div className="space-y-6">
           {experiences.map((exp, index) => (

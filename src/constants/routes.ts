@@ -8,6 +8,12 @@
 export const ROUTES = {
   pages: {
     home: '/',
+    about: '/about',
+    experience: '/experience',
+    projects: '/projects',
+    services: '/services',
+    testimonials: '/testimonials',
+    contact: '/contact',
   },
   meta: {
     sitemap: '/sitemap.xml',
