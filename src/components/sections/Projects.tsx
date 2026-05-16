@@ -153,7 +153,8 @@ export function Projects({ variant = 'section' }: ProjectsProps) {
             <Card key={index} glass hover className="overflow-hidden group">
               <div className="relative overflow-hidden rounded-lg mb-4 h-48 bg-gray-800">
                 <Image
-                  src={`${basePath}${project.image}`}
+                  src={project.image.startsWith('http')? project.image: `${basePath}${project.image}`
+                 }
                   alt={project.title}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-300"
