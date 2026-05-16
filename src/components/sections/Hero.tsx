@@ -67,7 +67,15 @@ export function Hero() {
               <Mail className="w-5 h-5" />
               Get In Touch
             </Button>
-            <Button variant="secondary">
+            <Button variant="secondary"
+            onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/sumitgiri.pdf'; 
+                link.download = 'Sumit_Giri_Resume.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}>
               <Download className="w-5 h-5" />
               Download Resume
             </Button>

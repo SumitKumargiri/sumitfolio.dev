@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" fill="none" role="img" aria-label="Contact header illustration">
+  <defs>
+    <linearGradient id="g1" x1="120" y1="520" x2="900" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA" stop-opacity="0.8"/>
+      <stop offset="0.55" stop-color="#34D399" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0.35"/>
+    </linearGradient>
+    <radialGradient id="r1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(340 220) rotate(-12) scale(520 360)">
+      <stop stop-color="#34D399" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#111827" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" fill="#0B1220"/>
+  <rect x="40" y="40" width="880" height="460" rx="28" fill="url(#r1)" />
+
+  <g filter="url(#blur)" opacity="0.9">
+    <path d="M140 420C196 300 320 236 470 244C620 252 690 182 814 182C872 182 914 198 940 218C924 388 808 474 632 474H230C176 474 154 450 140 420Z" fill="url(#g1)"/>
+  </g>
+
+  <g opacity="0.95">
+    <path d="M260 160C260 138 278 120 300 120H660C682 120 700 138 700 160V340C700 362 682 380 660 380H300C278 380 260 362 260 340V160Z" fill="#0F172A" stroke="rgba(255,255,255,0.10)" stroke-width="2"/>
+    <path d="M300 176L480 292L660 176" stroke="rgba(255,255,255,0.16)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M300 176V340H660V176" stroke="rgba(255,255,255,0.08)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <circle cx="760" cy="196" r="10" fill="#60A5FA" fill-opacity="0.7"/>
+    <circle cx="792" cy="230" r="8" fill="#34D399" fill-opacity="0.65"/>
+    <circle cx="820" cy="204" r="6" fill="#A78BFA" fill-opacity="0.6"/>
+  </g>
+</svg>
+

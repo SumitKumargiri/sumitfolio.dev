@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" fill="none" role="img" aria-label="About header illustration">
+  <defs>
+    <linearGradient id="g1" x1="110" y1="60" x2="900" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA" stop-opacity="0.85"/>
+      <stop offset="0.55" stop-color="#A78BFA" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0.35"/>
+    </linearGradient>
+    <radialGradient id="r1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(300 160) rotate(45) scale(360 260)">
+      <stop stop-color="#93C5FD" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#111827" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" fill="#0B1220"/>
+  <rect x="40" y="40" width="880" height="460" rx="28" fill="url(#r1)" />
+
+  <g filter="url(#blur)" opacity="0.9">
+    <path d="M158 404C210 318 298 268 402 278C522 290 586 218 694 210C786 204 852 252 888 330C836 420 744 470 630 470C466 470 330 470 214 470C184 470 166 452 158 404Z" fill="url(#g1)"/>
+  </g>
+
+  <g opacity="0.9">
+    <path d="M168 200C260 128 374 100 508 120C618 136 698 120 792 86" stroke="#93C5FD" stroke-opacity="0.35" stroke-width="10" stroke-linecap="round"/>
+    <path d="M190 252C304 186 418 166 534 184C642 200 728 192 812 164" stroke="#A78BFA" stroke-opacity="0.25" stroke-width="10" stroke-linecap="round"/>
+    <path d="M210 304C334 246 452 232 572 248C688 264 766 262 836 244" stroke="#22D3EE" stroke-opacity="0.22" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <g opacity="0.95">
+    <circle cx="220" cy="170" r="10" fill="#60A5FA" fill-opacity="0.9"/>
+    <circle cx="284" cy="218" r="8" fill="#A78BFA" fill-opacity="0.75"/>
+    <circle cx="350" cy="262" r="6" fill="#22D3EE" fill-opacity="0.75"/>
+    <circle cx="520" cy="124" r="7" fill="#60A5FA" fill-opacity="0.6"/>
+    <circle cx="740" cy="112" r="9" fill="#A78BFA" fill-opacity="0.6"/>
+  </g>
+</svg>
+

@@ -6,7 +6,11 @@ import { ChevronLeft, ChevronRight, Quote, Star } from 'lucide-react';
 import { useState } from 'react';
 import Image from 'next/image';
 
-export function Testimonials() {
+interface TestimonialsProps {
+  variant?: 'section' | 'page';
+}
+
+export function Testimonials({ variant = 'section' }: TestimonialsProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials = [
@@ -49,20 +53,27 @@ export function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-900/10 to-transparent">
+    <section
+      id="testimonials"
+      className={`px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-900/10 to-transparent ${
+        variant === 'page' ? 'py-16' : 'py-32'
+      }`}
+    >
       <div className="max-w-5xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            Testimonials
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-4" />
-          <p className="text-gray-400">What clients say about working with me</p>
-        </motion.div>
+        {variant === 'section' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+              Testimonials
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-4" />
+            <p className="text-gray-400">What clients say about working with me</p>
+          </motion.div>
+        )}
 
         <div className="relative">
           <Card glass className="relative overflow-hidden">
