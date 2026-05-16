@@ -7,7 +7,6 @@ import { ExternalLink, Github } from 'lucide-react';
 import { useState } from 'react';
 import Image from 'next/image';
 
-const basePath = process.env.NODE_ENV === 'production'? '/sumitfolio.dev': '';
 
 interface ProjectsProps {
   variant?: 'section' | 'page';
@@ -15,6 +14,7 @@ interface ProjectsProps {
 
 export function Projects({ variant = 'section' }: ProjectsProps) {
   const [filter, setFilter] = useState('All');
+  const basePath = process.env.NODE_ENV === 'production'? '/sumitfolio.dev': '';
 
   const projects = [
     {
@@ -153,8 +153,9 @@ export function Projects({ variant = 'section' }: ProjectsProps) {
             <Card key={index} glass hover className="overflow-hidden group">
               <div className="relative overflow-hidden rounded-lg mb-4 h-48 bg-gray-800">
                 <Image
-                  src={project.image.startsWith('http')? project.image: `${basePath}${project.image}`
-                 }
+                  src={project.image.startsWith('http://') || project.image.startsWith('https://')
+                      ? project.image: `${basePath}${project.image}`
+                  }
                   alt={project.title}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-300"
