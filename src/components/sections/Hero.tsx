@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/Button';
 import { SECTIONS } from '@/constants';
 
 export function Hero() {
+const basePath =process.env.NODE_ENV === 'production'? '/sumitfolio.dev': '';
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20" />
@@ -70,7 +71,7 @@ export function Hero() {
             <Button variant="secondary"
             onClick={() => {
                 const link = document.createElement('a');
-                link.href = '/sumitgiri.pdf'; 
+                link.href = `${basePath}/sumitgiri.pdf`;
                 link.download = 'Sumit_Giri_Resume.pdf';
                 document.body.appendChild(link);
                 link.click();
