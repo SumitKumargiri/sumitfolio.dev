@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" fill="none" role="img" aria-label="Testimonials header illustration">
+  <defs>
+    <linearGradient id="g1" x1="120" y1="150" x2="900" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A78BFA" stop-opacity="0.8"/>
+      <stop offset="0.55" stop-color="#60A5FA" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0.35"/>
+    </linearGradient>
+    <radialGradient id="r1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(720 220) rotate(18) scale(520 360)">
+      <stop stop-color="#A78BFA" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#111827" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" fill="#0B1220"/>
+  <rect x="40" y="40" width="880" height="460" rx="28" fill="url(#r1)" />
+
+  <g filter="url(#blur)" opacity="0.9">
+    <path d="M150 410C206 290 320 232 458 242C618 256 682 176 812 176C874 176 916 194 940 216C920 380 804 474 630 474H230C176 474 154 448 150 410Z" fill="url(#g1)"/>
+  </g>
+
+  <g opacity="0.95">
+    <path d="M200 160C200 140 216 124 236 124H724C744 124 760 140 760 160V326C760 346 744 362 724 362H350L270 412V362H236C216 362 200 346 200 326V160Z" fill="#0F172A" stroke="rgba(255,255,255,0.10)" stroke-width="2"/>
+    <path d="M260 186H700" stroke="rgba(255,255,255,0.10)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M260 236H650" stroke="rgba(255,255,255,0.10)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M260 286H600" stroke="rgba(255,255,255,0.10)" stroke-width="12" stroke-linecap="round"/>
+
+    <path d="M248 206C248 186 264 170 284 170H294C314 170 330 186 330 206V216C330 236 314 252 294 252H284C264 252 248 236 248 216V206Z" fill="#A78BFA" fill-opacity="0.45"/>
+    <path d="M320 206C320 186 336 170 356 170H366C386 170 402 186 402 206V216C402 236 386 252 366 252H356C336 252 320 236 320 216V206Z" fill="#60A5FA" fill-opacity="0.35"/>
+  </g>
+</svg>
+

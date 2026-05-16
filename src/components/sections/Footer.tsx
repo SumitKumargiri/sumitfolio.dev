@@ -1,13 +1,15 @@
 'use client';
 
+import { ROUTES } from '@/constants/routes';
 import { Github, Linkedin, Mail, Twitter, Heart } from 'lucide-react';
+import Link from 'next/link';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: <Github className="w-5 h-5" />, href: 'https://github.com', label: 'GitHub' },
-    { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com', label: 'LinkedIn' },
+    { icon: <Github className="w-5 h-5" />, href: 'https://github.com/SumitKumargiri', label: 'GitHub' },
+    { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/in/sumit-giri-524718214', label: 'LinkedIn' },
     { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com', label: 'Twitter' },
     { icon: <Mail className="w-5 h-5" />, href: 'mailto:sumitgiri15434@gmail.com', label: 'Email' },
   ];
@@ -48,7 +50,9 @@ export function Footer() {
             <span>•</span>
             <button className="hover:text-blue-400 transition-colors">Terms of Service</button>
             <span>•</span>
-            <button className="hover:text-blue-400 transition-colors">Contact</button>
+            <Link href={ROUTES.pages.contact}>
+              <button className="hover:text-blue-400 transition-colors">Contact</button>
+            </Link>
           </div>
         </div>
       </div>

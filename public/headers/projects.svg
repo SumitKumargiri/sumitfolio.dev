@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" fill="none" role="img" aria-label="Projects header illustration">
+  <defs>
+    <linearGradient id="g1" x1="120" y1="120" x2="880" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA" stop-opacity="0.85"/>
+      <stop offset="0.55" stop-color="#22D3EE" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0.35"/>
+    </linearGradient>
+    <radialGradient id="r1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(280 250) rotate(10) scale(420 320)">
+      <stop stop-color="#67E8F9" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#111827" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" fill="#0B1220"/>
+  <rect x="40" y="40" width="880" height="460" rx="28" fill="url(#r1)" />
+
+  <g filter="url(#blur)" opacity="0.9">
+    <path d="M160 420C224 300 344 232 478 240C624 248 692 180 812 178C876 176 916 194 940 214C910 370 790 470 620 470H230C184 470 162 452 160 420Z" fill="url(#g1)"/>
+  </g>
+
+  <g opacity="0.95">
+    <rect x="160" y="120" width="230" height="140" rx="18" fill="#111827" stroke="rgba(255,255,255,0.10)" stroke-width="2"/>
+    <rect x="410" y="160" width="210" height="120" rx="18" fill="#111827" stroke="rgba(255,255,255,0.10)" stroke-width="2"/>
+    <rect x="640" y="110" width="160" height="150" rx="18" fill="#111827" stroke="rgba(255,255,255,0.10)" stroke-width="2"/>
+
+    <rect x="182" y="146" width="96" height="12" rx="6" fill="#60A5FA" fill-opacity="0.7"/>
+    <rect x="182" y="170" width="160" height="10" rx="5" fill="white" fill-opacity="0.10"/>
+    <rect x="182" y="192" width="140" height="10" rx="5" fill="white" fill-opacity="0.10"/>
+
+    <rect x="432" y="186" width="88" height="12" rx="6" fill="#22D3EE" fill-opacity="0.65"/>
+    <rect x="432" y="210" width="152" height="10" rx="5" fill="white" fill-opacity="0.10"/>
+    <rect x="432" y="232" width="124" height="10" rx="5" fill="white" fill-opacity="0.10"/>
+
+    <rect x="662" y="136" width="86" height="12" rx="6" fill="#A78BFA" fill-opacity="0.65"/>
+    <rect x="662" y="160" width="116" height="10" rx="5" fill="white" fill-opacity="0.10"/>
+    <rect x="662" y="182" width="98" height="10" rx="5" fill="white" fill-opacity="0.10"/>
+  </g>
+</svg>
+
