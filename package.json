@@ -9,7 +9,7 @@
     "start": "next start",
     "export": "next export",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out --dotfiles false",
+    "deploy": "gh-pages -d out",
     "lint": "next lint",
     "type-check": "tsc -p tsconfig.typecheck.json --noEmit",
     "format": "prettier --write \"src/**/*.{ts,tsx,json,md}\"",
