@@ -68,6 +68,15 @@ export function Projects({ variant = 'section' }: ProjectsProps) {
       "demo": "https://verydesi.com/"
     },
     {
+      "title": "Swasthya InGit Healthcare Platform",
+      "description": "A government-supported digital healthcare and telemedicine platform designed to provide accessible, affordable, and quality healthcare services to rural and underserved communities. The application enables online doctor consultations, patient health record management, telemedicine support, appointment scheduling, and healthcare monitoring with a secure and user-friendly interface.",
+      "image": "/headers/SwasthyaIngit.png",
+      "tech": ["Dotnet","Angular","SQL Server","Dapper","JWT Token","REST API","Clean Architecture","Unit Testing","SignalR","WebSocket"],
+      "category": "Full-Stack",
+      "github": "#",
+      "demo": "https://swasthyaingit.in/#/"
+    },
+    {
       "title": "CodeLearn Tutorial Platform",
       "description": "A modern coding tutorial platform with interactive learning resources, programming courses, hands-on projects, and community support. Features responsive design, clean UI, and developer-focused learning experience.",
       "image": "/headers/codelearn.png",
