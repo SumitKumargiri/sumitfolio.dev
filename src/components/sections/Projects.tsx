@@ -22,8 +22,8 @@ export function Projects({ variant = 'section' }: ProjectsProps) {
       description:'An AI-powered English learning and communication platform designed to improve speaking, pronunciation, grammar,    vocabulary, and real-world conversation skills. The application provides personalized learning experiences, interactive' 
       + 'lessons, speech recognition–based pronunciation feedback, adaptive practice sessions, and progress tracking for students,'  + 'professionals, and English learners.',
       image: '/headers/Babblio.png',
-      tech: [ 'Dotnet','PostgresSQL','SignalR','Clean Architecture','JWt Token'],
-      category: 'Mobile App',
+      tech: [ 'Dotnet','React','PostgresSQL','SignalR','Clean Architecture','JWt Token'],
+      category: 'Full-Stack',
       github: '#',
       demo: 'https://play.google.com/store/apps/details?id=com.babblio.android',
     },
@@ -31,7 +31,8 @@ export function Projects({ variant = 'section' }: ProjectsProps) {
       title: 'Customer Inventory Management System',
       description: 'A scalable full-stack inventory management system built with React and .NET using Clean Architecture principles.' 
            + 'The platform supports real-time inventory tracking, customer management, live stock updates using SignalR and WebSocket communication, interactive dashboards with amCharts, and secure SQL Server data management for enterprise-level performance.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop',
+      // image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop',
+      image: '/headers/connexia1.png',
       tech: [ 'React','.NET','Clean Architecture','SignalR','WebSocket','Hub','SQL Server','amCharts','jest test cases'],
       category: 'Full-Stack',
       github: 'https://github.com',
@@ -47,14 +48,41 @@ export function Projects({ variant = 'section' }: ProjectsProps) {
       github: 'https://github.com/SumitKumargiri',
       demo:'https://cnx-championxconnect-portal-dev.azurewebsites.net/Account/Login?app=fleetx-dev.connexia.championx.com/#/home',
     },
+    // {
+    //   "title": "Babblio Learning Dashboard",
+    //   "description": "A modern AI-powered learning management dashboard designed to monitor learner progress, manage courses, track performance analytics, and improve communication-based learning experiences. The dashboard provides real-time insights, learner management, AI conversation monitoring, reporting tools, and interactive analytics to help educators and organizations make data-driven decisions efficiently.",
+    //   "image": "/headers/Babbliodashboard.png",
+    //   "tech": ["Dotnet Web API","React","Ant Design","Postgresql","Base64","Ant design","PDFViewModel"],
+    //   "category": "Full Stack",
+    //   "github": "#",
+    //   "demo": "https://dashboard.babblio.io/"
+    // },
     {
-      "title": "Babblio Learning Dashboard",
-      "description": "A modern AI-powered learning management dashboard designed to monitor learner progress, manage courses, track performance analytics, and improve communication-based learning experiences. The dashboard provides real-time insights, learner management, AI conversation monitoring, reporting tools, and interactive analytics to help educators and organizations make data-driven decisions efficiently.",
-      "image": "/headers/Babbliodashboard.png",
-      "tech": ["Dotnet Web API","React","Ant Design","Postgresql","Base64","Ant design","PDFViewModel"],
-      "category": "Full Stack",
-      "github": "#",
-      "demo": "https://dashboard.babblio.io/"
+      "title": "VeryDesi Community Platform",
+      "description": "A modern community platform connecting Desi communities across America with events, room listings, local services, and networking features. Includes responsive UI, advanced search, event management, and real-time updates.",
+      "image": "/headers/verydesi.png",
+      "tech": ["Next.js","TypeScript","Tailwind CSS","ShadCN UI","PostgreSQL"],
+      "category": "Frontend",
+      "github": "https://github.com/verydesi/verydesi",
+      "demo": "https://verydesi.com/"
+    },
+    {
+      "title": "CodeLearn Tutorial Platform",
+      "description": "A modern coding tutorial platform with interactive learning resources, programming courses, hands-on projects, and community support. Features responsive design, clean UI, and developer-focused learning experience.",
+      "image": "/headers/codelearn.png",
+      "tech": ["Next.js","TypeScript","Tailwind CSS","React","ShadCN UI","Framer Motion"],
+      "category": "Frontend",
+      "github": "https://github.com/SumitKumargiri/codelearn-tutorial",
+      "demo": "https://sumitkumargiri.github.io/codelearn-tutorial/"
+    },
+    {
+      title: 'Real-time Chat App',
+      description: 'WebSocket-based chat application with rooms, direct messaging, and file sharing.',
+      image: 'https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=600&h=400&fit=crop',
+      tech: ['Next.js', 'Socket.io', 'Websocket','Hub', 'SignalR','Tailwind CSS'],
+      category: 'Frontend',
+      github: 'https://github.com/Sumitgiriyoeki/ChatApplication',
+      demo: 'https://sumitgiriyoeki.github.io/ChatApplication/',
     },
     {
       title: 'Task Management SaaS',
@@ -63,16 +91,16 @@ export function Projects({ variant = 'section' }: ProjectsProps) {
       tech: ['Dotnet','Clean Architecture', 'TypeScript', 'PostgreSQL', 'Angular'],
       category: 'Full-Stack',
       github: 'https://github.com/SumitKumargiri/TaskManagement',
-      demo: 'https://example.com',
+      demo: '#',
     },
     {
       title: 'Social Media Dashboard',
       description: 'Analytics dashboard for tracking social media metrics across multiple platforms.',
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-      tech: ['React', 'D3.js', 'Firebase'],
+      tech: ['React','TypeScript','Tailwind CSS', 'PostgreSQL', 'Chart.js'],
       category: 'Frontend',
       github: 'https://github.com',
-      demo: 'https://example.com',
+      demo: '#',
     },
     {
       title: 'REST API Gateway',
@@ -81,26 +109,18 @@ export function Projects({ variant = 'section' }: ProjectsProps) {
       tech: ['Dotnet', 'Clean Architecture', 'Redis', 'Dapper','SignalR','Unit Testing'],
       category: 'Backend',
       github: 'https://github.com/SumitKumargiri/Dotnet-Core8',
-      demo: 'https://example.com',
+      demo: '#',
     },
     {
       title: 'AI Content Generator',
       description: 'AI-powered content generation tool using OpenAI API with custom templates.',
       image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
-      tech: ['React', 'Python', 'FastAPI', 'OpenAI'],
+      tech: ['React','Tailwind CSS', 'PostgreSQL', 'Python','Chromadb', 'FastAPI', 'OpenAI'],
       category: 'Full-Stack',
       github: 'https://github.com',
-      demo: 'https://example.com',
+      demo: '#',
     },
-    {
-      title: 'Real-time Chat App',
-      description: 'WebSocket-based chat application with rooms, direct messaging, and file sharing.',
-      image: 'https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=600&h=400&fit=crop',
-      tech: ['Next.js', 'Socket.io', 'Websocket', 'SignalR','Tailwind CSS'],
-      category: 'Frontend',
-      github: 'https://github.com/Sumitgiriyoeki/ChatApplication',
-      demo: 'https://sumitgiriyoeki.github.io/ChatApplication/',
-    },
+    
   ];
 
   const categories = ['All', 'Full-Stack', 'Frontend', 'Backend'];
