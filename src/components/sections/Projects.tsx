@@ -57,6 +57,7 @@ export function Projects({ variant = 'section' }: ProjectsProps) {
     //   "github": "#",
     //   "demo": "https://dashboard.babblio.io/"
     // },
+    
     {
       "title": "VeryDesi Community Platform",
       "description": "A modern community platform connecting Desi communities across America with events, room listings, local services, and networking features. Includes responsive UI, advanced search, event management, and real-time updates.",
