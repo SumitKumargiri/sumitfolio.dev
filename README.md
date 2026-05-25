@@ -1,5 +1,11 @@
 # Premium Developer Portfolio Website
 
+<div align="center">
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_Portfolio-000?style=for-the-badge&logo=vercel)](https://sumitkumargiri.github.io/sumitfolio.dev/)
+[![GitHub Repo](https://img.shields.io/badge/💻_GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/SumitKumargiri/sumitfolio.dev)
+</div>
+<br/>
+
 A modern, fully responsive portfolio website built with Next.js App Router, React, TypeScript, and Tailwind CSS — crafted for developers who want a fast, scalable, and visually polished online presence.
 
 ---
