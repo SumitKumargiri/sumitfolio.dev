@@ -3,11 +3,15 @@
 <div align="center">
 
 <a href="https://sumitkumargiri.github.io/sumitfolio.dev/" target="_blank">
-  <img src="https://img.shields.io/badge/🚀_Live_Demo-Visit_Portfolio-0f172a?style=for-the-badge&logo=vercel&logoColor=white" />
+  <img src="https://img.shields.io/badge/🚀_Live_Demo-Visit_Portfolio-6366F1?style=for-the-badge&logo=vercel&logoColor=white" />
 </a>
 
 <a href="https://github.com/SumitKumargiri/sumitfolio.dev" target="_blank">
-  <img src="https://img.shields.io/badge/💻_GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/💻_GitHub-Repository-22C55E?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+
+<a href="https://sumitkumargiri.github.io/sumitfolio.dev/" target="_blank">
+  <img src="https://img.shields.io/badge/🌐_Portfolio-Explore_Now-F43F5E?style=for-the-badge&logo=google-chrome&logoColor=white" />
 </a>
 
 </div>
