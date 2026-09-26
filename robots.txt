@@ -1,5 +1,4 @@
-User-agent: *
+User-Agent: *
 Allow: /
 
-Sitemap: /sitemap.xml
-
+Sitemap: https://sumitkumargiri.github.io/sumitfolio.dev/sitemap.xml
