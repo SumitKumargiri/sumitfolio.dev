@@ -1,11 +1,13 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from "next";
+
+export const dynamic = "force-static";
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
-      userAgent: '*',
-      allow: '/',
+      userAgent: "*",
+      allow: "/",
     },
-    sitemap: 'https://sumitkumargiri.github.io/sumitfolio.dev/sitemap.xml',
+    sitemap: "https://sumitkumargiri.github.io/sumitfolio.dev/sitemap.xml",
   };
 }

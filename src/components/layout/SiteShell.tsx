@@ -5,6 +5,7 @@ import { Footer } from '@/components/sections/Footer';
 import { BackToTop } from '@/components/ui/BackToTop';
 import { CursorGlow } from '@/components/effects/CursorGlow';
 import { LoadingScreen } from '@/components/effects/LoadingScreen';
+import Image from 'next/image';
 
 interface SiteShellProps {
   children: ReactNode;
@@ -36,9 +37,17 @@ export function SiteShell({
             {/*------ Background Image ---------*/}
             {headerImageSrc && (
               <>
-                <img
+                {/* <img
                   src={headerImageSrc}
                   alt={headerImageAlt || 'Background'}
+                  className="absolute inset-0 w-full h-full object-cover"
+                /> */}
+                <Image
+                  src={headerImageSrc}
+                  alt={headerImageAlt || 'Background'}
+                  fill
+                  priority
+                  // sizes="100vw"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black/60" />
