@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: 'Sumit Giri',
-      url: 'https://johndoe.dev',
+      url: 'https://sumitkumargiri.github.io/sumitfolio.dev',
     },
   ],
   creator: 'Sumit Giri',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://johndoe.dev',
+    url: 'https://sumitkumargiri.github.io/sumitfolio.dev',
     title: 'Full-Stack Developer | Sumit Giri',
     description: 'Building exceptional digital experiences with modern web technologies.',
     images: [
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Senior Full-Stack Developer | Sumit Giri',
     description: 'Building exceptional digital experiences with modern web technologies.',
-    creator: '@johndoe',
+    creator: '@sumitkumargiri',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -78,8 +78,40 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'google_site_verification_code_here',
+    google: 'google50036ce6672e08c7.html',
   },
+};
+
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Sumit Giri",
+  url: "https://sumitkumargiri.github.io/sumitfolio.dev/",
+  image: "https://sumitkumargiri.github.io/sumitfolio.dev/headers/sumit-giri.jpg", 
+  jobTitle: "Full-Stack Developer",
+  description: "Full-Stack Developer specializing in React, Next.js, TypeScript, .NET and IIS,CI/CD,SQL SERVER,Angular",
+  worksFor: {
+    "@type": "Organization",
+    name: "Freelance"
+  },
+  knowsAbout: [
+    "React",
+    "Next.js",
+    "TypeScript",
+    ".NET",
+    "IIS",
+    "CI/CD",
+    "SQL Server",
+    "Angular"
+  ],
+  sameAs: [
+    "https://github.com/SumitKumargiri",
+    "https://www.linkedin.com/in/sumit-giri-524718214/",
+    "https://www.youtube.com/@SKtutorial15434",
+    "https://www.instagram.com/goshwamiaaditya/",
+    "https://www.facebook.com/aaditya.goshwami.39/"
+  ]
 };
 
 interface RootLayoutProps {
@@ -93,6 +125,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Providers>
           {children}
         </Providers>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personSchema),
+          }}
+        />
       </body>
     </html>
   );
